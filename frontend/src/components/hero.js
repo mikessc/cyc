@@ -2,15 +2,16 @@ import React from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Colors from './index';
+import { Divider, H1, B, WhiteLayer } from './styles';
 import { Container, Grid } from '@material-ui/core';
 
 import { logo, heroImg } from '../images/index';
 
 const Hero = styled.div`
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background: url(${heroImg}) no-repeat center;
+  background-attachment: fixed;
   background-size: cover;
   position: relative;
   margin-top: 70px;
@@ -23,28 +24,23 @@ const HeroLogo = styled(Container)`
   transform: translate(-50%, -50%);
 `;
 
-const WhiteLayer = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: white;
-  opacity: 0.6;
-`;
-
-const H1 = styled.h1`
+const WelcomeText = styled(H1)`
   text-align: center;
 `;
 
-const HeaderComp = () => {
+const HeroComp = () => {
   return (
     <>
       <Hero>
-        <WhiteLayer />
+        <WhiteLayer color="white" />
         <HeroLogo>
           <Grid container justify="center">
             <Grid item md={6}>
               <img src={logo} alt="" />
-              <H1>Bienvenidos!</H1>
+              <Divider height="30px" heightT="40px" heightD="50px" />
+              <WelcomeText>
+                <B>Bienvenidos!</B>
+              </WelcomeText>
             </Grid>
           </Grid>
         </HeroLogo>
@@ -53,4 +49,4 @@ const HeaderComp = () => {
   );
 };
 
-export default HeaderComp;
+export default HeroComp;

@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 import Colors from './index';
 import { Container, Grid } from '@material-ui/core';
-import { logo } from '../images/index';
+import { logo2 } from '../images/index';
 
 const Header = styled.header`
   background: ${Colors.orange_light};
@@ -35,7 +35,7 @@ const HeaderComp = () => {
                   textDecoration: `none`
                 }}
               >
-                <Logo src={logo} alt="C&C Multiservicios" />
+                <Logo src={logo2} alt="C&C Multiservicios" />
               </Link>
             </Grid>
             <Grid item md={10}>

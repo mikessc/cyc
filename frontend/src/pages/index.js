@@ -1,6 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Layout, SEO, Hero } from '../components/index';
+import { 
+  Layout, 
+  SEO, 
+  Hero,
+  Intro,
+  MisionVision
+} from '../components/index';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCoffee,
@@ -17,6 +23,8 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Hero />
+    <Intro />
+    <MisionVision />
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
