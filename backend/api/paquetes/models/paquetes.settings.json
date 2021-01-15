@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "paquetes",
+  "info": {
+    "name": "Paquetes",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Codigo": {
+      "type": "string"
+    },
+    "Albaran": {
+      "type": "string"
+    },
+    "Peso": {
+      "type": "string"
+    },
+    "Estado": {
+      "type": "enumeration",
+      "enum": [
+        "Bodega",
+        "Ruta",
+        "Rural",
+        "Entregado",
+        "Rechazado",
+        "Devolucion",
+        "Recoleccion",
+        "Ausente"
+      ]
+    },
+    "Historial": {
+      "type": "text"
+    },
+    "Detalles": {
+      "type": "text"
+    },
+    "Recibe": {
+      "type": "enumeration",
+      "enum": [
+        "Titular",
+        "Padres",
+        "Hermanos",
+        "Seguridad",
+        "Otro"
+      ]
+    },
+    "Otro": {
+      "type": "string"
+    },
+    "afiliado": {
+      "model": "afiliados",
+      "via": "paquetes"
+    },
+    "ruta": {
+      "model": "rutas"
+    }
+  }
+}

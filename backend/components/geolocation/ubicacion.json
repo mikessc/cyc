@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_geolocation_ubicacions",
+  "info": {
+    "name": "Ubicacion",
+    "icon": "map-marker-alt"
+  },
+  "options": {},
+  "attributes": {
+    "lat": {
+      "type": "string"
+    },
+    "lon": {
+      "type": "string"
+    }
+  }
+}

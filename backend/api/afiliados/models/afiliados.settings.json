@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "afiliados",
+  "info": {
+    "name": "Afiliados"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Nombre": {
+      "type": "string"
+    },
+    "Codigo": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Tel": {
+      "type": "biginteger",
+      "max": "99999999"
+    },
+    "Cel": {
+      "type": "biginteger",
+      "max": "99999999"
+    },
+    "Direccion": {
+      "type": "text"
+    },
+    "Poblacion": {
+      "type": "string"
+    },
+    "CodPostal": {
+      "type": "string"
+    },
+    "Ubicacion": {
+      "type": "component",
+      "repeatable": false,
+      "component": "geolocation.ubicacion"
+    },
+    "paquetes": {
+      "via": "afiliado",
+      "collection": "paquetes"
+    }
+  }
+}

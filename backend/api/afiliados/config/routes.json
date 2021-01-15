@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/afiliados",
+      "handler": "afiliados.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/afiliados/count",
+      "handler": "afiliados.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/afiliados/:id",
+      "handler": "afiliados.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/afiliados",
+      "handler": "afiliados.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/afiliados/:id",
+      "handler": "afiliados.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/afiliados/:id",
+      "handler": "afiliados.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
