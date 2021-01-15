@@ -1,15 +1,10 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Divider, H3, B, WhiteLayer, Devices, Colors, P } from './styles';
+import { H3, B, WhiteLayer, Devices, Colors, P } from './styles';
 import { Container, Grid } from '@material-ui/core';
 import { logistics_bg } from '../images/index';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faFlag,
-  faEye
-} from '@fortawesome/free-regular-svg-icons';
+import { faFlag, faEye } from '@fortawesome/free-regular-svg-icons';
 
 const MisionVision = styled.div`
   width: 100%;
@@ -48,13 +43,14 @@ const Card = styled.div`
   z-index: 200;
   cursor: pointer;
 
-  .svg-inline--fa, .cardIcon {
-    transition: all .5s ease;
+  .svg-inline--fa,
+  .cardIcon {
+    transition: all 0.5s ease;
   }
 
   &:hover {
     .cardIcon {
-      border-color: ${Colors.orange}
+      border-color: ${Colors.orange};
     }
 
     .svg-inline--fa {
@@ -97,7 +93,12 @@ const MisionVisionComp = () => {
                 <CardTitle>
                   <B>Misión</B>
                 </CardTitle>
-                <CardDesc>Proporcionar soluciones profesionales y personalizadas en el ámbito del transporte y distribución de mercancías, a nivel nacional e internacional, ofrecer soluciones reales de logística, con el fin de dar respuesta veraz y oportuna a las necesidades de nuestros clientes y así formar parte activa en la consecución de sus objetivos.</CardDesc>
+                <CardDesc>
+                  Proporcionar soluciones profesionales y personalizadas en el ámbito del transporte y distribución de
+                  mercancías, a nivel nacional e internacional, ofrecer soluciones reales de logística, con el fin de
+                  dar respuesta veraz y oportuna a las necesidades de nuestros clientes y así formar parte activa en la
+                  consecución de sus objetivos.
+                </CardDesc>
               </Card>
             </Grid>
             <Grid item sm={6} md={4}>
@@ -108,7 +109,11 @@ const MisionVisionComp = () => {
                 <CardTitle>
                   <B>Visión</B>
                 </CardTitle>
-                <CardDesc>Destacar como uno de los principales operadores logísticos del mercado, aportando soluciones profesionales y personalizadas en el ámbito del transporte y la logística, con clara orientación al cliente, basados en la formación, motivación, compromiso e implicación del recurso humano.</CardDesc>
+                <CardDesc>
+                  Destacar como uno de los principales operadores logísticos del mercado, aportando soluciones
+                  profesionales y personalizadas en el ámbito del transporte y la logística, con clara orientación al
+                  cliente, basados en la formación, motivación, compromiso e implicación del recurso humano.
+                </CardDesc>
               </Card>
             </Grid>
           </Grid>

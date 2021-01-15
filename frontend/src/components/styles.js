@@ -7,7 +7,7 @@ export const Colors = {
   sea_blue: '#0d3149',
   orange_dark: '#b74500',
   orange: '#cf6400',
-  orange_light: '#cf6400'
+  orange_light: '#ef7e00'
 };
 
 export const Breakpoints = {
@@ -186,7 +186,7 @@ export const WhiteLayer = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  background: ${props => (props.color ? Colors[props.color] : "white")};
+  background: ${props => (props.color ? Colors[props.color] : 'white')};
   opacity: 0.6;
   top: 0;
   left: 0;

@@ -1,5 +1,5 @@
 require('dotenv').config({
-  path: `.env`
+  path: `.env.${process.env.NODE_ENV}`
 });
 
 module.exports = {
@@ -20,7 +20,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-strapi',
       options: {
-        apiURL: process.env.API_URL || 'http://localhost:1337',
+        apiURL: process.env.GATSBY_API_URL || 'http://localhost:1337',
         queryLimit: 100000
       }
     },
@@ -33,13 +33,13 @@ module.exports = {
         lang: `es`,
         display: `standalone`,
         icon: `./src/images/logo.png`,
-        start_url: `/`
+        start_url: `/app`
       }
     },
     {
       resolve: `gatsby-plugin-offline`,
       options: {
-        precachePages: [`/index`, `/page-2`]
+        precachePages: [`/app/*`, `/login`, `/app/dashboard`, `/app`, `/index`]
       }
     },
     `gatsby-transformer-sharp`,
